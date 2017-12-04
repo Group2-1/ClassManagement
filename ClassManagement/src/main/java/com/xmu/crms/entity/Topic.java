@@ -1,5 +1,9 @@
 package com.xmu.crms.entity;
-
+/**
+ * topic entity
+ * @author lingyun
+ *
+ */
 public class Topic {
 	
 	private Integer id;
