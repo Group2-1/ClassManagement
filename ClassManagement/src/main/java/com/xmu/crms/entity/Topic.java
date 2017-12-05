@@ -7,11 +7,17 @@ package com.xmu.crms.entity;
 public class Topic {
 	
 	private Integer id;
-	private String serial;	
+	
+	private String serial;
+	
 	private String name;	
-	private String description;	
+	
+	private String description;
+	
 	private Integer groupLimit;	
-	private Integer groupMemberLimit;	
+	
+	private Integer groupMemberLimit;
+	
 	private Integer groupLeft;
 
 	public Topic(Integer id, String serial, String name, String description, Integer groupLimit, Integer groupMemberLimit, Integer groupLeft) {

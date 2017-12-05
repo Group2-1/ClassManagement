@@ -2,7 +2,7 @@ package com.xmu.crms.entity;
 
 /**
  * user
- * @author qinlingyun
+ * @author lingyun
  *
  */
 public class User {

@@ -1,9 +1,9 @@
 package com.xmu.crms.service;
 
-import com.xmu.crms.entity.Classroom;
+import com.xmu.crms.entity.Class;
 
 public interface ClassroomService {
 
-	Classroom findClassById(long classId);
+	Class findClassById(long classId);
 
 }
