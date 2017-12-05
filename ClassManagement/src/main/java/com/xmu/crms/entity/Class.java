@@ -23,6 +23,16 @@ public class Class {
 	
 	private Proportions proportions;
 	
+	public Class(int id, String name, String time, String site, Proportions proportions) {
+		this.id = id;
+		this.name = name;
+		this.numStudent = null;
+		this.time = time;
+		this.site = site;
+		this.calling = null;
+		this.roster = null;
+	}
+
 	public Integer getId() {
 		return id;
 	}

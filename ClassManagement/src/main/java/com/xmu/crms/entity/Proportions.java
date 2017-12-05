@@ -16,6 +16,14 @@ public class Proportions {
 
 	private int presentpercent;
 
+	public Proportions(int threepercent, int fourpercent, int fivepercent, int reportpercent, int presentpercent) {
+		this.threepercent = threepercent;
+		this.fourpercent = fourpercent;
+		this.fivepercent = fivepercent;
+		this.reportpercent = reportpercent;
+		this.presentpercent = presentpercent;
+	}
+
 	public int getThreepercent() {
 
 		return threepercent;
