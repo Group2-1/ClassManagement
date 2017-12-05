@@ -11,25 +11,36 @@ import com.xmu.crms.view.vo.SeminarGrade;
  */
 public class Group {
 	
-	private String id;
+	private Integer id;
 	
 	private String name;
 	
-	private Student leader;
+	private User leader;
 	
-	private List<Student> members;
+	private List<User> members;
 	
-	private List<Topic> topics;
+	private Topic topic;
 	
 	private String report;
 	
 	private SeminarGrade grade;
 
-	public String getId() {
+	public Group(int id, User leader, List<User> members, Topic topic, String report) {
+		this.id = id;
+		this.name = null;
+		this.leader = leader;
+		this.members = members;
+		this.topic = topic;
+		this.report = report;
+		this.grade = null;	
+		
+	}
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -41,28 +52,28 @@ public class Group {
 		this.name = name;
 	}
 
-	public Student getLeader() {
+	public User getLeader() {
 		return leader;
 	}
 
-	public void setLeader(Student leader) {
+	public void setLeader(User leader) {
 		this.leader = leader;
 	}
 
-	public List<Student> getMembers() {
+	public List<User> getMembers() {
 		return members;
 	}
 
-	public void setMembers(List<Student> members) {
+	public void setMembers(List<User> members) {
 		this.members = members;
 	}
 
-	public List<Topic> getTopics() {
-		return topics;
+	public Topic getTopic() {
+		return topic;
 	}
 
-	public void setTopics(List<Topic> topics) {
-		this.topics = topics;
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
 
 	public String getReport() {

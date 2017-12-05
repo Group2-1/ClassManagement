@@ -7,9 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>班级信息</title>
    <link rel="stylesheet" href="../../css/teacher/content.css">
-    <script type="text/javascript" charset="utf-8" src="../../js/jquery-1.12.4.min.js" ></script>
-    <script type="text/javascript" charset="utf-8" src="../../js/bootstrap.min.js"></script>
-
+ 
 </head>
 <body>
     
@@ -18,9 +16,9 @@
             课堂管理系统
           </div>
           <div class="icon">
-              <a href="TeacherCourseHomePage.html"><img src="../../img/home.png">首页</a>
-              <img src="../../img/help.png">帮助
-              <a href="../common/AccountLoginPage.html"><img src="../../img/exit.png">退出</a>
+            <img src="../../Img/home.png">首页
+            <img src="../../Img/help.png">帮助
+            <img src="../../Img/exit.png">退出
           </div>
           <div class="clear"></div>
         </div>
@@ -58,50 +56,39 @@
                         </div>
                         <div class="item" style="margin-left: 25%">
                           <label class="smallItemName">5分占比</label>
-                          <label class="itemName" name="seminarGrade">30%</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
                           <label class="smallItemName">4分占比</label>
-                           <label class="itemName" name="seminarGrade">40%</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
                           <label class="smallItemName">3分占比</label>
-                           <label class="itemName" name="seminarGrade">30%</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
                         </div>
-                
                         <div class="item">
-                          <label class="itemName">学生名单:</label>
+                          <label class="itemName">开始时间:</label>
+                          <label class="itemName">2017/11/11</label>
+                          <label class="itemName">开始时间 </label>
+                          <input class="timeStyle" value="2017/11/14">
+                        </div>
+                        <div class="item">
+                          <label class="itemName">导入学生名单:</label>
                           <button class="selectFile">下载文件</button>
                         </div>
                         <div class="item">
-                            <button class="submit"><a href="">修改</a></button>
+                          <button class="submit">修改</button>
                           <button class="reset">删除班级</button>
                           <div class="clear"></div>
                         </div>
                         <div class="item">
                           <div class="clear"></div>
-                        </div>   
+                        </div>
+                        <div class="topicBlockBody">
+                          <div class="topicBlock"><div class="topicBlockFont">TopicA</div></div>
+                          <div class="topicBlock"><div class="topicBlockFont">TopicB</div></div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
             <div class="clear"></div>
         </div>
-    <script type="text/javascript">
-      $(function(){
-        $(".submit").click(function(){
-          alert("modify!");
-            window.location.href = " 修改班级.html";
-
-        });
-        $(".reset").click(function(){
-          if (confirm("are you sure to delete this class?")) {
-            window.location.href = " 课程首页.html";
-          }
-        });
-
-        $(".selectFile").click(function(){
-          alert("modify!");
-            window.location.href = " 修改班级.html";
-
-        });        
-
-      });
-    </script>
 </body>
 </html>

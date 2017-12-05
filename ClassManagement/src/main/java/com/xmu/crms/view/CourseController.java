@@ -20,15 +20,10 @@ import com.xmu.crms.view.vo.CourseClass;
  */
 
 @RestController
-
 @RequestMapping("/course")
-
 public class CourseController {
 
-
-
     @GetMapping
-
     public Object selectCourses() {
 
         return new Course[]{
@@ -41,20 +36,14 @@ public class CourseController {
 
     }
 
-
-
     private String selectCoursesForTeacher() {
-
-
 
         return "";
 
     }
 
 
-
     private String selectCoursesForStudent() {
-
 
         return "";
 
@@ -118,7 +107,7 @@ public class CourseController {
     	
         return new CourseClass[]{
 
-                new CourseClass(45, "周三1-2节"),
+                new CourseClass(45, "周一1-2节"),
 
                 new CourseClass(48, "周三3-4节")
 
@@ -127,9 +116,7 @@ public class CourseController {
     }
 
     @PostMapping("/{courseId}/class")
-
     @ResponseStatus(HttpStatus.CREATED)
-
     public Object createClassForCourse(@PathVariable("courseId") int courseId) {
 
         return new Object() {
@@ -140,12 +127,8 @@ public class CourseController {
 
     }
 
-
-
     @GetMapping("/{courseId}/seminar")
-
     @ResponseStatus(HttpStatus.OK)
-
     public Object selectSeminarsByCourse(@PathVariable("courseId") int courseId) {
 
         return new Seminar[]{
@@ -158,12 +141,8 @@ public class CourseController {
 
     }
 
-
-
     @PostMapping("/{courseId}/seminar")
-
     @ResponseStatus(HttpStatus.CREATED)
-
     public Object createSeminarForCourse(@PathVariable("courseId") int courseId) {
 
         return new Object() {

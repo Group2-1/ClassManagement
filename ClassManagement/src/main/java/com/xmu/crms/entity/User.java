@@ -31,6 +31,22 @@ public class User {
 	
 	private String avatar;
 
+	public User(Integer id, String name) {
+		this.id = id;
+		this.type = null;
+		this.name = name;
+		this.number = null;
+		this.phone = null;
+		this.email = null;
+		this.gender = null;
+		this.password = null;
+		this.school = null;
+		this.title = null;
+		this.unionId = null;
+		this.avatar = null;
+		
+	}
+
 	public Integer getId() {
 		return id;
 	}
