@@ -33,23 +33,16 @@ public class Topic {
 	
 	public Topic(Integer id, String name, String description, Integer groupLimit, Integer groupMemberLimit) {
 		this.id = id;
-		this.serial = null;
 		this.name = name;
 		this.description = description;
 		this.groupLimit = groupLimit;
 		this.groupMemberLimit = groupMemberLimit;
-		this.groupLeft = null;
 		
 	}	
 
 	public Topic(Integer id, String name) {
 		this.id = id;
-		this.serial = null;
 		this.name = name;
-		this.description = null;
-		this.groupLimit = null;
-		this.groupMemberLimit = null;
-		this.groupLeft = null;
 		
 	}	
 	

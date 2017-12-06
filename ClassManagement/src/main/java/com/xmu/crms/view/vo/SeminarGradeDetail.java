@@ -6,6 +6,8 @@ package com.xmu.crms.view.vo;
  */
 public class SeminarGradeDetail {
 	
+	private String SeminarName;
+	
 	private String groupName;
 	
 	private String leaderName;
@@ -15,6 +17,17 @@ public class SeminarGradeDetail {
 	private Integer reportGrade;
 	
 	private Integer grade;
+
+	public SeminarGradeDetail(String seminarName, String groupName, String leaderName, Integer presentationGrade,
+			Integer reportGrade, Integer grade) {
+		super();
+		SeminarName = seminarName;
+		this.groupName = groupName;
+		this.leaderName = leaderName;
+		this.presentationGrade = presentationGrade;
+		this.reportGrade = reportGrade;
+		this.grade = grade;
+	}
 
 	public String getGroupName() {
 		return groupName;
@@ -54,6 +67,14 @@ public class SeminarGradeDetail {
 
 	public void setGrade(Integer grade) {
 		this.grade = grade;
+	}
+
+	public String getSeminarName() {
+		return SeminarName;
+	}
+
+	public void setSeminarName(String seminarName) {
+		SeminarName = seminarName;
 	}
 
 }

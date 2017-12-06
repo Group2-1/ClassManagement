@@ -1,8 +1,5 @@
 package com.xmu.crms.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,10 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.xmu.crms.entity.Group;
 import com.xmu.crms.entity.Seminar;
 import com.xmu.crms.entity.Topic;
-import com.xmu.crms.entity.User;
 
 /**
 
@@ -33,9 +28,20 @@ public class SeminarController {
         return new Seminar(29, "讨论课1", "需求分析", "fixed", "2017-10-01", "2017-10-07");
 
     }
+    
+    @GetMapping("/{seminarId}/my")
+    public Object selectSeminarMy(@PathVariable("seminarId") int seminarId) {
 
+        return new Object() {
+        	public String name = "张美丽";
+        	public String courseName = "OOAD";
+        	public String endTime = "2017-10-01";
+        };
+
+    }
+       
     @PutMapping("/{seminarId}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @ResponseStatus(HttpStatus.OK)
     public Object updateSeminar(@PathVariable("seminarId") int seminarId) {
 
         return null;
@@ -109,7 +115,7 @@ public class SeminarController {
     }
 
     @PostMapping("/{seminarId}/topic")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     public Object createTopic(@PathVariable("seminarId") int seminarId) {
 
         return null;
@@ -153,7 +159,7 @@ public class SeminarController {
     @GetMapping("/{seminarId}/group/my")
     public Object selectMyGroup(@PathVariable("seminarId") int seminarId) {
 
-        User leader = new User(123, "大张伟");
+       /* User leader = new User(123, "大张伟");
 
         User member1 = new User(456, "易烊千玺");
 
@@ -169,7 +175,47 @@ public class SeminarController {
 
         Group group = new Group(3, leader, members, topic, "report");
 
-        return group;
+        return group;*/
+    	return new Object(){
+    		
+        	public int id = 10;
+        	public String name = "张美丽";    		
+    	};
+
+    }
+
+    
+    @GetMapping("/{seminarId}/class/{classId}/attendance")
+    public Object selectGroupLate(@PathVariable("seminarId") int seminarId, @PathVariable("classId") int classId) {
+
+        return new Object() {
+        	public int id = 1;
+        	public String name = "张美丽";
+        };
+
+    }    
+    
+   
+    @GetMapping("/{seminarId}/class/{classId}/attendence")
+    public Object selectGroupLateList(@PathVariable("seminarId") int seminarId, @PathVariable("classId") int classId) {
+
+        return new Object() {
+        	public int numPresent = 70;
+        	public int numStudent = 60;
+        	public int status = 1;
+        	public String group = null;
+        };
+
+    }
+    
+    
+    @GetMapping("/{seminarId}/class/{classId}/attendance/late")
+    public Object selectAttendanceLate(@PathVariable("seminarId") int seminarId, @PathVariable("classId") int classId) {
+
+        return new Object() {
+        	public int id = 1;
+        	public String name = "张美丽";
+        };
 
     }
 

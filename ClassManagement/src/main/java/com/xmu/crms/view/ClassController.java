@@ -16,9 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.xmu.crms.entity.Class;
 import com.xmu.crms.entity.Group;
 import com.xmu.crms.entity.Proportions;
+import com.xmu.crms.entity.School;
+import com.xmu.crms.entity.Student;
 import com.xmu.crms.entity.User;
-import com.xmu.crms.view.vo.ClassVO;
-import com.xmu.crms.view.vo.CourseClassVO;
+import com.xmu.crms.view.vo.CourseClass;
 /**
  * class controller
  * @author lingyun
@@ -30,12 +31,18 @@ public class ClassController {
 
     @GetMapping
     public Object selectClasses() {
+    	
+    	/*School school = new School(50789, "北京大学", "北京市", "北京市");
+    	
+    	Teacher teacher1 = new Teacher(112, "教师", "30220152200778", "王美红", "15759271302", "342637445@qq.com", "male", school, "member", "xxxxxx", "15759271301", "/aveter/xxx.png");
+    	
+    	Teacher teacher2 = new Teacher(111, "教师", "30220152200779", "邱明", "15759271301", "342637442@qq.com", "female", school, "captain","xxxxxxx", "15759271301", "/aveter/xxx.png");
+    	*/
+        return new CourseClass[]{
 
-        return new ClassVO[]{
+                new CourseClass(23, "周三1-2节", 60, "周三一二节", "海韵201", "OOAD", "teacher1"),
 
-                new ClassVO(23, "周一1-2节", "邱明", "学生公寓405", new CourseClassVO(1, "OOAD", 6)),
-
-                new ClassVO(42, "周三3-4节", "邱明", "海韵教学楼202", new CourseClassVO(5, "J2EE", 2))
+                new CourseClass(24, "周三3-4节", 60, "周五一二节", "海韵201", "J2EE", "teacher2")
                 
         };
     }
@@ -46,7 +53,7 @@ public class ClassController {
 
         Proportions proportions = new Proportions(20, 60, 20, 50, 50);
 
-        Class classDO = new Class(23, "周三1-2节", "周三一二节", "海韵201", proportions);
+        Class classDO = new Class(23, "周三1-2节", 60, "周三一二节", "海韵201", 1, "tpl/xxx.excel", proportions);
 
         return classDO;
 
@@ -69,6 +76,21 @@ public class ClassController {
 
     }
 
+    @GetMapping("/{classId}/student")
+    public Object getStudentList() {
+    	
+    	School school1 = new School(50789, "北京大学", "北京市", "北京市");
+    	
+    	School school2 = new School(30258, "厦门大学", "福建省", "厦门市");
+    	
+        return new Student[]{
+
+                new Student(111, "学生", "30220152200779", "邱明", "15759271301", "342637442@qq.com", "female", school1, "captain","xxxxxxx", "15759271301", "/aveter/xxx.png"),
+
+                new Student(112, "学生", "30220152200778", "王美红", "15759271302", "342637445@qq.com", "male", school2, "member", "xxxxxx", "15759271301", "/aveter/xxx.png")
+                
+        };
+    }    
 
     @PostMapping("/{classId}/student")
     @ResponseStatus(HttpStatus.CREATED)
@@ -77,15 +99,21 @@ public class ClassController {
         return new Object() {
 
             public int id = 123;
+            
+            public String name = "周三1-2节";
+            
+            public String number = "20150102";
+            
+            public String url = "/avater/class";
 
         };
 
     }
 
 
-    @DeleteMapping("/{classId}/student")
+    @DeleteMapping("/{classId}/student/{studentId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public Object dropClass(@PathVariable("classId") int classId) {
+    public Object dropClass(@PathVariable("classId") int classId, @PathVariable("studentId") int studentId) {
 
         return null;
 
@@ -96,7 +124,7 @@ public class ClassController {
     @GetMapping("/{classId}/attendance")
     public String selectAttendance(@PathVariable("classId") int classId) {
 
-        return "";/*????????????*/
+        return "";
 
     }
 

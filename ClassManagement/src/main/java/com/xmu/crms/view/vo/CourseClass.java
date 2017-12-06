@@ -1,6 +1,5 @@
 package com.xmu.crms.view.vo;
 
-import com.xmu.crms.entity.Teacher;
 /**
  * 
  * @author lingyun
@@ -20,7 +19,7 @@ public class CourseClass {
 	
 	private String courseName;
 	
-	private Teacher courseTeacher;
+	private String courseTeacher;
 
 	public CourseClass(int id, String name) {
 		this.id = id;
@@ -31,7 +30,7 @@ public class CourseClass {
 		this.courseName = name;
 		this.courseTeacher = null;
 	}
-	public CourseClass(int id, String name,Integer numStudent,String time,String site,String courseName,Teacher courseTeacher) {
+	public CourseClass(int id, String name,Integer numStudent,String time,String site,String courseName,String courseTeacher) {
 		this.id = id;
 		this.name = name;
 		this.numStudent = numStudent;
@@ -89,11 +88,11 @@ public class CourseClass {
 		this.courseName = courseName;
 	}
 
-	public Teacher getCourseTeacher() {
+	public String getCourseTeacher() {
 		return courseTeacher;
 	}
 
-	public void setCourseTeacher(Teacher courseTeacher) {
+	public void setCourseTeacher(String courseTeacher) {
 		this.courseTeacher = courseTeacher;
 	}
 

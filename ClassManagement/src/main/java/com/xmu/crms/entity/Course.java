@@ -22,8 +22,7 @@ public class Course {
 	
 	private Proportions proportions;
 
-	public Course(int id, String name, int numClass, int numStudent, 
-			String startTime, String endTime) {
+	public Course(int id, String name, int numClass, int numStudent, String startTime, String endTime) {
 		this.id = id;
 		this.name = name;
 		this.numClass = numClass;

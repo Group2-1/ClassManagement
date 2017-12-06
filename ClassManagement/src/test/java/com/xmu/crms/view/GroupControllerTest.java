@@ -279,7 +279,7 @@ public class GroupControllerTest {
 	/**
 
      * 按ID获取小组成绩
-
+     * 
      * url: /group/{groupId}/grade
 
      * httpMethod: GET

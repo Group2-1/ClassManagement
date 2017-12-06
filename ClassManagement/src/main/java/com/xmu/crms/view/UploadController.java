@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UploadController {
 
     @PostMapping("/avatar")
-    @ResponseStatus(HttpStatus.CREATED)
+    @ResponseStatus(HttpStatus.OK)
     public Object uploadAvatar() {
 
         return new Object() {

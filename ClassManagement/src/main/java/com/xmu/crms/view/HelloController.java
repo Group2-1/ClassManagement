@@ -3,9 +3,12 @@ package com.xmu.crms.view;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import com.xmu.crms.entity.Course;
 import com.xmu.crms.entity.Grade;
@@ -17,9 +20,18 @@ import com.xmu.crms.entity.User;
 import com.xmu.crms.view.vo.ClassVO;
 import com.xmu.crms.view.vo.CourseClassVO;
 
-@RestController
+@Controller
+@EnableAutoConfiguration
 public class HelloController {
 
+    @RequestMapping("/hello")
+    @ResponseStatus(HttpStatus.OK)
+    public String hello(Model model) {
+        model.addAttribute("message", "welcome to class management system");
+        return "AccountLoginPage"; 	
+    }	
+	
+	
     @RequestMapping("/teacher/course/homePage")
     public String frame(Model model) {
         model.addAttribute("data", new String[]{"周三1-2节", "周三000-2节", "周三1-20节"});

@@ -56,33 +56,14 @@ public class User {
 	
 	public User(Integer id, String name) {
 		this.id = id;
-		this.type = null;
 		this.name = name;
-		this.number = null;
-		this.phone = null;
-		this.email = null;
-		this.gender = null;
-		this.password = null;
-		this.school = null;
-		this.title = null;
-		this.unionId = null;
-		this.avatar = null;
 		
 	}
 
 	public User(Integer id, String number, String name) {
 		this.id = id;
-		this.type = null;
 		this.name = name;
 		this.number = number;
-		this.phone = null;
-		this.email = null;
-		this.gender = null;
-		this.password = null;
-		this.school = null;
-		this.title = null;
-		this.unionId = null;
-		this.avatar = null;
 		
 	}
 
@@ -96,15 +77,25 @@ public class User {
 		this.phone = phone;
 		this.email = email;
 		this.gender = gender;
-		this.password = null;
 		this.school = school;
-		this.title = null;
-		this.unionId = null;
 		this.avatar = avatar;
 		
 	}
-	
-	
+
+
+	public User(Integer id, String type, String name, String phone, String email, Gender gender,
+			School school, String title,String avatar) {
+		this.id = id;
+		this.type = type;
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+		this.school = school;
+		this.title = title;
+		this.avatar = avatar;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -153,11 +144,11 @@ public class User {
 		this.email = email;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 

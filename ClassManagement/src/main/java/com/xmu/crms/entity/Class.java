@@ -23,14 +23,15 @@ public class Class {
 	
 	private Proportions proportions;
 	
-	public Class(int id, String name, String time, String site, Proportions proportions) {
+	public Class(int id, String name, Integer numStudent, String time, String site, Integer calling, String roster, Proportions proportions) {
 		this.id = id;
 		this.name = name;
-		this.numStudent = null;
+		this.numStudent = numStudent;
 		this.time = time;
 		this.site = site;
-		this.calling = null;
-		this.roster = null;
+		this.calling = calling;
+		this.roster = roster;
+		this.proportions = proportions;
 	}
 
 	public Integer getId() {

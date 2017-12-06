@@ -58,7 +58,7 @@ font-size:20px;
 display:block;
 position:absolute;
 width:90px;height:26px;
-left:40%;top:165px;
+left:40%;top:202px;
 color:black
 }
 .phoneNum input{
@@ -73,7 +73,7 @@ font-size:20px;
 display:block;
 position:absolute;
 width:90px;height:26px;
-left:40%;top:200px;
+left:40%;top:246px;
 color:black
 }
 .password input{
@@ -88,7 +88,7 @@ font-size:20px;
 display:block;
 position:absolute;
 width:90px;height:26px;
-left:40%;top:240px;
+left:40%;top:290px;
 color:black
 }
 .name input{
@@ -97,67 +97,20 @@ width:130px;height:23px;
 left:70px;top:5px;
 font-size:15px;
 }
-.province{
-font-family:Arial;
-font-size:20px;
-display:block;
-position:absolute;
-width:90px;height:26px;
-left:40%;top:283px;
-color:black
-}
-.provinceSelect{
-position:absolute;
-left:70px;
-width: 90%;
-height: 100%;
-margin-right: 2%;
-}
-.city{
-font-family:Arial;
-font-size:20px;
-display:block;
-position:absolute;
-width:90px;height:26px;
-left:40%;top:318px;
-color:black
-}
-.citySelect{
-position:absolute;
-left:70px;
-width: 90%;
-height: 100%;
-margin-right: 2%;
-}
 .school{
 font-family:Arial;
 font-size:20px;
 display:block;
 position:absolute;
-width:135px;height:26px;
-left:40%;top:350px;
+width:90px;height:26px;
+left:40%;top:329px;
 color:black
 }
-.schoolSelect{
-position:absolute;
-left:70px;
-width: 100%;
-height: 100%;
-margin-right: 2%;
-}
-.createSchool{
-position:absolute;
-left:230px;
-width: 70%;
-background-color: white;
-color:black;
-padding:3px 4px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 20px;
-font-family:Arial;
-cursor: pointer;
+.school input{
+position:absolute;	
+width:130px;height:23px;
+left:70px;top:5px;
+font-size:15px;
 }
 .gender{
 font-family:Arial;
@@ -165,7 +118,7 @@ font-size:20px;
 display:block;
 position:absolute;
 width:90px;height:26px;
-left:40%;top:385px;
+left:40%;top:375px;
 color:black
 }
 .male{
@@ -174,7 +127,7 @@ font-size:20px;
 display:block;
 position:absolute;
 width:90px;height:26px;
-left:47%;top:385px;
+left:47%;top:375px;
 color:black
 }
 .male input{
@@ -188,7 +141,7 @@ font-size:20px;
 display:block;
 position:absolute;
 width:90px;height:26px;
-left:52%;top:385px;
+left:52%;top:375px;
 color:black
 }
 .female input{

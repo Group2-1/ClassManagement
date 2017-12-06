@@ -21,10 +21,10 @@ public class Seminar {
 	
 	private String endTime;
 	
-	List<Topic> topics;/*???????????*/
+	List<Topic> topics; 
 
-	List<Proportions> proportions;/*???????????*/
-	
+	List<Proportions> proportions;
+
 	public Seminar(Integer id, String name, String description, String groupingMethod, String startTime, String endTime) {
 		this.id = id;
 		this.name = name;

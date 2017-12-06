@@ -1,7 +1,5 @@
 package com.xmu.crms.view.vo;
 
-import java.util.List;
-
 import com.xmu.crms.entity.Class;
 /**
  * 
@@ -14,13 +12,26 @@ public class SeminarClasses {
 	
 	private String name;
 	
-	private String courseName;
+	private String groupingMethod;
 	
 	private String startTime;
 	
 	private String endTime;
 	
-	private List<Class> classes;/*？？？？？？？？？？？？？？？*/
+	private Class[] classes;
+
+	
+
+	public SeminarClasses(Integer id, String name, String groupingMethod, String startTime, String endTime,
+			Class[] classes) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.groupingMethod = groupingMethod;
+		this.startTime = startTime;
+		this.endTime = endTime;
+		this.classes = classes;
+	}
 
 	public Integer getId() {
 		return id;
@@ -38,12 +49,12 @@ public class SeminarClasses {
 		this.name = name;
 	}
 
-	public String getCourseName() {
-		return courseName;
+	public String getGroupingMethod() {
+		return groupingMethod;
 	}
 
-	public void setCourseName(String courseName) {
-		this.courseName = courseName;
+	public void setGroupingMethod(String groupingMethod) {
+		this.groupingMethod = groupingMethod;
 	}
 
 	public String getStartTime() {
@@ -62,11 +73,11 @@ public class SeminarClasses {
 		this.endTime = endTime;
 	}
 
-	public List<Class> getClasses() {
+	public Class[] getClasses() {
 		return classes;
 	}
 
-	public void setClasses(List<Class> classes) {
+	public void setClasses(Class[] classes) {
 		this.classes = classes;
 	}
 

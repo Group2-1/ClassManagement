@@ -7,7 +7,45 @@ package com.xmu.crms.entity;
 public class Teacher {
 	
 	private Integer id;
+
+	private String type;
 	
+	private String number;
+	
+	private String name;
+	
+	private String phone;
+	
+	private String email;
+	
+	private String gender;
+	
+	private School school;
+	
+	private String title;
+	
+	private String password;
+	
+	private String unionId;
+	
+	private String avatar;	
+	
+	public Teacher(Integer id, String type, String number, String name, String phone, String email, String gender,
+			School school, String title, String password, String unionId, String avatar) {
+		this.id = id;
+		this.type = type;
+		this.number = number;
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+		this.school = school;
+		this.title = title;
+		this.password = password;
+		this.unionId = unionId;
+		this.avatar = avatar;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -103,27 +141,5 @@ public class Teacher {
 	public void setAvatar(String avatar) {
 		this.avatar = avatar;
 	}
-
-	private String type;
-	
-	private String number;
-	
-	private String name;
-	
-	private String phone;
-	
-	private String email;
-	
-	private String gender;
-	
-	private School school;
-	
-	private String title;
-	
-	private String password;
-	
-	private String unionId;
-	
-	private String avatar;
 
 }

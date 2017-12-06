@@ -16,6 +16,14 @@ public class CourseDetail {
 	
 	private String teacherEmail;
 
+	public CourseDetail(Integer id, String name, String description, String teacherName, String teacherEmail) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.teacherName = teacherName;
+		this.teacherEmail = teacherEmail;
+	}
+
 	public Integer getId() {
 		return id;
 	}

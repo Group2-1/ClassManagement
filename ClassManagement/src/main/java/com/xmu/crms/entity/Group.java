@@ -27,24 +27,18 @@ public class Group {
 
 	public Group(int id, User leader, List<User> members, Topic topic, String report) {
 		this.id = id;
-		this.name = null;
 		this.leader = leader;
 		this.members = members;
 		this.topic = topic;
 		this.report = report;
-		this.grade = null;	
 		
 	}
 
 	public Group(int id, User leader, List<User> members) {
 		this.id = id;
-		this.name = null;
 		this.leader = leader;
 		this.members = members;
-		this.topic = null;
-		this.report = null;
-		this.grade = null;	
-		
+
 	}
 
 	public Integer getId() {

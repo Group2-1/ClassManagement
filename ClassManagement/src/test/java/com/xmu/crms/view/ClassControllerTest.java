@@ -27,9 +27,7 @@ import org.springframework.test.web.servlet.MockMvc;
  */
 
 @RunWith(SpringRunner.class)
-
 @WebMvcTest
-
 public class ClassControllerTest {
 
 	@Autowired

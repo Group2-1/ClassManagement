@@ -111,17 +111,18 @@ public class GroupController {
 
 
     @GetMapping("/{groupId}/grade")
+    @ResponseStatus(HttpStatus.OK)
     public Object selectGroupGrade(@PathVariable("groupId") int groupId) {
 
         class PresentationGrade {
 
-            public Integer id;
+        	public Integer topicId;
 
             public Integer grade;
 
-            public PresentationGrade(Integer id, Integer grade) {
+            public PresentationGrade(Integer topicId, Integer grade) {
 
-                this.id = id;
+                this.topicId = topicId;
 
                 this.grade = grade;
 
@@ -147,6 +148,7 @@ public class GroupController {
 
 
     @PutMapping("/{groupId}/grade/report")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Object updateGroupReportGrade(@PathVariable("groupId") int groupId) {
 
         return null;
@@ -155,6 +157,7 @@ public class GroupController {
 
 
     @PutMapping("/{groupId}/grade/presentation/{studentId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Object updateGroupPresentationGrade(@PathVariable("groupId") int groupId) {
 
         return null;

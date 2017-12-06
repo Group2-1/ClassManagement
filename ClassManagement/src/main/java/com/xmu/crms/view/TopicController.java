@@ -22,7 +22,7 @@ public class TopicController {
 	@GetMapping("/{topicId}")
 	public Object selectTopic(@PathVariable("topicId") int topicId) {
 
-	return new Topic(257, "概要设计", "领域模型与模块划分", 5, 2);
+		return new Topic(257, "A2", "概要设计", "领域模型与模块划分", 5, 2, 1);
 
 	}
 
