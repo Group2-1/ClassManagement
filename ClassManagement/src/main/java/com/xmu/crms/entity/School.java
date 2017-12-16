@@ -1,5 +1,9 @@
 package com.xmu.crms.entity;
-
+/**
+ * 
+ * @author lingyun
+ *
+ */
 public class School {
 	
 	private Integer id;
@@ -9,6 +13,18 @@ public class School {
 	private String province;
 	
 	private String city;
+
+	public School(int id, String name, String province, String city) {
+		
+		this.id = id;
+		this.name = name;
+		this.province = province;
+		this.city = city;
+	}
+
+	public School() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;

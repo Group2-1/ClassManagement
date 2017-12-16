@@ -2,7 +2,7 @@ package com.xmu.crms.entity;
 
 /**
  * user
- * @author qinlingyun
+ * @author lingyun
  *
  */
 public class User {
@@ -19,7 +19,7 @@ public class User {
 	
 	private String email;
 	
-	private String gender;
+	private Gender gender;
 	
 	private School school;
 	
@@ -30,6 +30,66 @@ public class User {
 	private String unionId;
 	
 	private String avatar;
+
+
+    public enum Gender{
+
+        UNKNOWN(0, "unknown"),
+        MALE(1, "male"),
+        FEMALE(2, "female");
+
+        private int value;
+
+        private String description;
+
+        Gender(int value, String description) {
+            this.setValue(value);
+            this.description = description;
+        }
+
+        @Override
+        public String toString() {
+            return this.description;
+        }
+
+		public int getValue() {
+			return value;
+		}
+
+		public void setValue(int value) {
+			this.value = value;
+		}
+        
+    }
+	
+
+	public User(Integer id, String type, String number, String name, String phone, String email, Gender gender,
+			School school, String title, String password, String unionId, String avatar) {
+		super();
+		this.id = id;
+		this.type = type;
+		this.number = number;
+		this.name = name;
+		this.phone = phone;
+		this.email = email;
+		this.gender = gender;
+		this.school = school;
+		this.title = title;
+		this.password = password;
+		this.unionId = unionId;
+		this.avatar = avatar;
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public User(Integer id, String type, String number, String name) {
+	this.id = id;
+	this.type = type;
+	this.number = number;
+	this.name = name;
+}
 
 	public Integer getId() {
 		return id;
@@ -79,11 +139,11 @@ public class User {
 		this.email = email;
 	}
 
-	public String getGender() {
+	public Gender getGender() {
 		return gender;
 	}
 
-	public void setGender(String gender) {
+	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 
