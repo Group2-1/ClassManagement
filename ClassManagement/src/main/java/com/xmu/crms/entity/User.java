@@ -2,7 +2,7 @@ package com.xmu.crms.entity;
 
 /**
  * user
- * @author lingyun
+ * @author qinlingyun
  *
  */
 public class User {
@@ -19,7 +19,7 @@ public class User {
 	
 	private String email;
 	
-	private Gender gender;
+	private String gender;
 	
 	private School school;
 	
@@ -30,71 +30,6 @@ public class User {
 	private String unionId;
 	
 	private String avatar;
-
-
-    public enum Gender{
-
-        UNKNOWN(0, "unknown"),
-        MALE(1, "male"),
-        FEMALE(2, "female");
-
-        private int value;
-
-        private String description;
-
-        Gender(int value, String description) {
-            this.value = value;
-            this.description = description;
-        }
-
-        @Override
-        public String toString() {
-            return this.description;
-        }
-        
-    }
-	
-	public User(Integer id, String name) {
-		this.id = id;
-		this.name = name;
-		
-	}
-
-	public User(Integer id, String number, String name) {
-		this.id = id;
-		this.name = name;
-		this.number = number;
-		
-	}
-
-
-	public User(int id, String type, String number, String name, String phone, String email, String avatar,
-			Gender gender, School school){
-		this.id = id;
-		this.type = type;
-		this.name = name;
-		this.number = number;
-		this.phone = phone;
-		this.email = email;
-		this.gender = gender;
-		this.school = school;
-		this.avatar = avatar;
-		
-	}
-
-
-	public User(Integer id, String type, String name, String phone, String email, Gender gender,
-			School school, String title,String avatar) {
-		this.id = id;
-		this.type = type;
-		this.name = name;
-		this.phone = phone;
-		this.email = email;
-		this.gender = gender;
-		this.school = school;
-		this.title = title;
-		this.avatar = avatar;
-	}
 
 	public Integer getId() {
 		return id;
@@ -144,11 +79,11 @@ public class User {
 		this.email = email;
 	}
 
-	public Gender getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(Gender gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 

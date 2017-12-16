@@ -1,23 +1,13 @@
 package com.xmu.crms.entity;
-/**
- * topic entity
- * @author lingyun
- *
- */
+
 public class Topic {
 	
 	private Integer id;
-	
-	private String serial;
-	
+	private String serial;	
 	private String name;	
-	
-	private String description;
-	
+	private String description;	
 	private Integer groupLimit;	
-	
-	private Integer groupMemberLimit;
-	
+	private Integer groupMemberLimit;	
 	private Integer groupLeft;
 
 	public Topic(Integer id, String serial, String name, String description, Integer groupLimit, Integer groupMemberLimit, Integer groupLeft) {
@@ -30,21 +20,6 @@ public class Topic {
 		this.groupLeft = groupLeft;
 		
 	}
-	
-	public Topic(Integer id, String name, String description, Integer groupLimit, Integer groupMemberLimit) {
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.groupLimit = groupLimit;
-		this.groupMemberLimit = groupMemberLimit;
-		
-	}	
-
-	public Topic(Integer id, String name) {
-		this.id = id;
-		this.name = name;
-		
-	}	
 	
 	public Integer getId() {
 		return id;

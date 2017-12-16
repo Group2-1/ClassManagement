@@ -12,8 +12,10 @@ import com.xmu.crms.entity.Topic;
  */
 public interface TopicService {
 
-	List<Topic> topics = new ArrayList<Topic>();
+	List<Topic> topicForm = new ArrayList<Topic>();
 	
-	Topic getTopicById(Integer topicId);
+	TopicService getTopicById(Integer topicId);
+	
+	
 
 }
