@@ -3,8 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>学生基本信息</title>
-    <link href="../../css/common/HomePage.css" rel="stylesheet" type="text/css"/>
-    <link href="../../css/student/content.css" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/common/HomePage.css}" rel="stylesheet" type="text/css"/>
+    <link th:href="@{/css/student/content.css}" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     	<div class="top">
@@ -12,9 +12,9 @@
         		课堂管理系统
         	</div>
         	<div class="icon">
-               <a href="StudentCourseHome.html"><span><img src="../../img/home.png">首页</span></a>
-                <a href="#"><span><img src="../../img/help.png">帮助</span></a>
-                <a href="../common/AccountLoginPage.html"><span><img src="../../img/exit.png">退出</span></a>
+                <img th:src="@{/img/home.png}">首页
+                <img th:src="@{/img/help.png}">帮助
+                <img th:src="@{/img/exit.png}">退出
             </div>
         	<div class="clear"></div>
     	</div>
@@ -23,8 +23,8 @@
                 <div class="title">导航</div>
                 <div class="line"></div>
                  <div class="courseIntroduction"><a class="guidefont" href="#">基本信息</a>
-                  <a class="guidefont" href="student/courseHome">课程信息</a>
-                  <a class="guidefont" href="student/chooseCourse">选择课程</a>
+                  <a class="guidefont" href="StudentCourseHome.html">课程信息</a>
+                  <a class="guidefont" href="choose_course.html">选择课程</a>
                 </div>
             </div>
             <div class="content">
@@ -36,20 +36,20 @@
                  <div class="info">
         <table class="table">
         <tr class="itemName">
-        <td >用户名：<span>12345678978</span></td>
-        <td>学号：<span>12345678978</span></td>
+        <td >用户名：<span id="username"></span></td>
+        <td>学号：<span id="number"></span></td>
         </tr>
         <tr class="itemName">
-        <td>姓名：<span>12345678978</span></td>
-        <td>性别：<span>12345678978</span></td>
+        <td>姓名：<span id="name"></span></td>
+        <td>性别：<span id="gender"></span></td>
         </tr>
         <tr class="itemName">
-        <td>学校：<span>12345678978</span></td>
-        <td>学历：<span>12345678978</span></td>
+        <td>学校：<span id="school"></span></td>
+        <td>学历：<span id="education"></span></td>
         </tr>
         <tr class="itemName">
-        <td>E-mail：<span>12345678978</span></td>
-        <td>联系方式：<span>12345678978</span></td>
+        <td>E-mail：<span id="email"></span></td>
+        <td>联系方式：<span id="phone"></span></td>
         </tr>
         </table>
         <br/>
@@ -57,7 +57,7 @@
         <br/>
         <br/>
         <div class="button">
-        <a href="student/infoModify"><button>修改</button></a>
+        <button>修改</button>
         </div>
         </div>
             </div>
@@ -65,5 +65,9 @@
            
             <div class="clear"></div>
         </div>
+<script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+
+<script type="text/javascript" th:src="@{/js/student.js}"></script>
+
 </body>
 </html>

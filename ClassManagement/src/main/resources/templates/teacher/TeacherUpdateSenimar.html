@@ -2,10 +2,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>创建话题</title>
-    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>讨论课修改</title>
     <link rel="stylesheet" href="../../css/teacher/content.css">
-    <link rel="stylesheet" href="../../css/teacher/frame.css">
 </head>
 <body>
     
@@ -33,23 +31,40 @@
                     <div class="line"></div>
                     <div class="itemBody">
                         <div class="item">
-                          <label class="itemName">题   目 :</label>
+                          <label class="itemName">讨论课名称:</label>
                           <input type="text" name="seminarName" class="bigInput">
                         </div>
                         <div class="item" style="height:40%;">
-                          <label class="itemName">说   明 :</label>
+                          <label class="itemName">讨论课说明:</label>
                           <textarea class="textStyle"></textarea>
                         </div>
                         <div class="item">
-                          <label class="itemName">组数限制: </label>
-                          <input type="text" name="groupLimit" class="middleInput">
+                          <label class="itemName">分组方式: </label>
+                          <select class="bigSelect"></select>
                         </div>
                         <div class="item">
-                          <label class="itemName">组内人数上限: </label>
-                          <input type="text" name="groupLimit" class="middleInput">
+                          <label class="itemName">开始时间: </label>
+                          <input type="date" name="startTime" class="timeStyle">
+                          <label class="itemName" style="margin-left: 15%">结束时间: </label>
+                          <input type="date" name="startTime" class="timeStyle">
                         </div>
                         <div class="item">
-                          <button class="submit">提 交</button>
+                          <label class="itemName">评分规则:</label>
+                          <label class="itemName">讨论课分数占比</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
+                          <label class="itemName">报告分数占比</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
+                        </div>
+                        <div class="item" style="margin-left: 18%">
+                          <label class="itemName">5分占比</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
+                          <label class="itemName">4分占比</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
+                          <label class="itemName">3分占比</label>
+                          <input type="text" name="seminarGrade" class="smallInput">
+                        </div>
+                        <div class="item">
+                          <a href="senimar_info.html"><button class="submit">提 交</button></a>
                           <button class="reset">重 置</button>
                           <div class="clear"></div>
                         </div>

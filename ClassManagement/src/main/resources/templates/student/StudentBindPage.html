@@ -15,9 +15,9 @@
 <div class="titleBackground"></div>
 <div class="title">课程管理系统</div>
 <div class="icon">
-<img src="../../img/home.png">首页
-<img src="../../img/help.png">帮助
-<img src="../../img/exit.png">退出
+    <img th:src="@{/img/home.png}">首页
+    <img th:src="@{/img/help.png}">帮助
+    <img th:src="@{/img/exit.png}">退出
 </div>
 <div class="phoneNum">手机号:<input type="text" name="phoneNum"/></div>
 <div class="password">密码:<input type="text" name="password"/></div>
@@ -28,7 +28,10 @@
 <div class="female">女<input type="radio" value="女" name="gender"/></div>
 <div class="studentNum">学号:<input type="text" name="stuffNum"/></div>
 <div class="eMail">邮箱:<input type="text" name="eMail"/></div>
-<a href="student/courseHome"><div class="submit">提交</div></a>
+<div class="submit" onclick="bind()">提交</div>
+
+<script type="text/javascript" th:src="@{/js/common.js}"></script>
+
 </body>
 
 </html>
