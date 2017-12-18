@@ -14,9 +14,9 @@
             课堂管理系统
           </div>
           <div class="icon">
-              <a href="TeacherCourseHomePage.html"><img src="../../img/home.png">首页</a>
-              <img src="../../img/help.png">帮助
-              <a href="../common/AccountLoginPage.html"><img src="../../img/exit.png">退出</a>
+              <a href="home"><img src="../../img/home.png">首页</a>
+              <img src="#">帮助
+              <a href="/login"><img src="../../img/exit.png">退出</a>
           </div>
           <div class="clear"></div>
         </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="content">
                 <div class="block">
-                    <div class="title">讨论课</div>
+                    <div class="title">话题</div>
                     <a herf="#" onclick="javascript:history.back(-1)"><div class="returnButton">返回上一页</div></a>
                     <div class="line"></div>
                     <div class="itemBody">
@@ -58,5 +58,15 @@
             </div>
             <div class="clear"></div>
         </div>
+        <script type="text/javascript">
+        $(".submit").click(function(){
+            window.location.href = "viewTopic";
+          });
+
+          $(".reset").click(function(){
+            window.location.href = "viewTopic";
+          });
+        
+        </script>      
 </body>
 </html>
