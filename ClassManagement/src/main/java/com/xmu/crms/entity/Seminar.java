@@ -1,48 +1,22 @@
 package com.xmu.crms.entity;
 
-import java.util.List;
+import java.math.BigInteger;
+import java.util.Date;
 
-/**
- * seminar entity
- * @author lingyun
- *
- */
 public class Seminar {
-	
-	private Integer id;
-	
+	private BigInteger id;
 	private String name;
-	
 	private String description;
-	
-	private String groupingMethod;
-	
-	private String startTime;
-	
-	private String endTime;
-	
-	List<Topic> topics; 
+	private Course course;
+	private Boolean fixed;
+	private Date startTime;
+	private Date endTime;
 
-	List<Proportions> proportions;
-
-	public Seminar(Integer id, String name, String description, String groupingMethod, String startTime, String endTime) {
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.groupingMethod = groupingMethod;
-		this.startTime = startTime;
-		this.endTime = endTime;
-	}
-
-	public Seminar() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Integer getId() {
+	public BigInteger getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 
@@ -62,44 +36,35 @@ public class Seminar {
 		this.description = description;
 	}
 
-	public String getGroupingMethod() {
-		return groupingMethod;
+	public Course getCourse() {
+		return course;
 	}
 
-	public void setGroupingMethod(String groupingMethod) {
-		this.groupingMethod = groupingMethod;
+	public void setCourse(Course course) {
+		this.course = course;
 	}
 
-	public String getStartTime() {
+	public Boolean getFixed() {
+		return fixed;
+	}
+
+	public void setFixed(Boolean fixed) {
+		this.fixed = fixed;
+	}
+
+	public Date getStartTime() {
 		return startTime;
 	}
 
-	public void setStartTime(String startTime) {
+	public void setStartTime(Date startTime) {
 		this.startTime = startTime;
 	}
 
-	public String getEndTime() {
+	public Date getEndTime() {
 		return endTime;
 	}
 
-	public void setEndTime(String endTime) {
+	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
 	}
-
-	public List<Topic> getTopics() {
-		return topics;
-	}
-
-	public void setTopics(List<Topic> topics) {
-		this.topics = topics;
-	}
-
-	public List<Proportions> getProportions() {
-		return proportions;
-	}
-
-	public void setProportions(List<Proportions> proportions) {
-		this.proportions = proportions;
-	}
-
 }
