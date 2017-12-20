@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.xmu.crms.entity.School;
 import com.xmu.crms.entity.User;
-import com.xmu.crms.view.vo.Response;
+import com.xmu.crms.entity.User.Gender;
+import com.xmu.crms.view.vo.Message;
 /**
  * 
  * @author lingyun
@@ -28,18 +29,18 @@ public class AccountController {
         user.setId(3486);
         user.setAvatar("/avatar/3486.png");
         user.setEmail("xxxxx@xx.com");
-        user.setGender(1);
+        user.setGender(Gender.MALE);
         user.setName("XXX");
         user.setNumber("234546");
         user.setSchool(school);
-        user.setTitle(1);
+        user.setTitle("教授");
         user.setPhone("12345678978");
-        user.setType(1);
+        user.setType("teacher");
         return user;
     }
 
     @PutMapping("/me")
-    public Response modifyInfo(@RequestBody User user, HttpServletResponse response) {
+    public Message modifyInfo(@RequestBody User user, HttpServletResponse response) {
         
     	response.setStatus(204);
         return null;

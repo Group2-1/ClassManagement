@@ -1,18 +1,36 @@
 package com.xmu.crms.entity;
-
-import java.math.BigInteger;
-
+/**
+ * 
+ * @author lingyun
+ *
+ */
 public class School {
-	private BigInteger id;
+	
+	private Integer id;
+	
 	private String name;
+	
 	private String province;
+	
 	private String city;
 
-	public BigInteger getId() {
+	public School(int id, String name, String province, String city) {
+		
+		this.id = id;
+		this.name = name;
+		this.province = province;
+		this.city = city;
+	}
+
+	public School() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(BigInteger id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -39,5 +57,5 @@ public class School {
 	public void setCity(String city) {
 		this.city = city;
 	}
-		
+
 }

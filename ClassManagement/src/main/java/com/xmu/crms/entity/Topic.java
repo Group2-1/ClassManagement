@@ -1,50 +1,109 @@
 package com.xmu.crms.entity;
-
-import java.math.BigInteger;
-
+/**
+ * topic entity
+ * @author lingyun
+ *
+ */
 public class Topic {
-	private BigInteger id;
-	private String name;
-	private String description;
-	private Integer groupNumberLimit;
-	private Integer groupStudentLimit;
-	private Seminar seminar;
 	
-	public BigInteger getId() {
+	private Integer id;
+	
+	private String serial;
+	
+	private String name;	
+	
+	private String description;
+	
+	private Integer groupLimit;	
+	
+	private Integer groupMemberLimit;
+	
+	private Integer groupLeft;
+
+	public Topic(Integer id, String serial, String name, String description, Integer groupLimit, Integer groupMemberLimit, Integer groupLeft) {
+		this.id = id;
+		this.serial = serial;
+		this.name = name;
+		this.description = description;
+		this.groupLimit = groupLimit;
+		this.groupMemberLimit = groupMemberLimit;
+		this.groupLeft = groupLeft;
+		
+	}
+	/*
+	public Topic(Integer id, String name, String description, Integer groupLimit, Integer groupMemberLimit) {
+		this.id = id;
+		this.name = name;
+		this.description = description;
+		this.groupLimit = groupLimit;
+		this.groupMemberLimit = groupMemberLimit;
+		
+	}	
+
+	public Topic(Integer id, String name) {
+		this.id = id;
+		this.name = name;
+		
+	}	*/
+	
+	public Topic() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(BigInteger id) {
+
+	public void setId(Integer id) {
 		this.id = id;
 	}
+
+	public String getSerial() {
+		return serial;
+	}
+
+	public void setSerial(String serial) {
+		this.serial = serial;
+	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public Integer getGroupNumberLimit() {
-		return groupNumberLimit;
+
+	public Integer getGroupLimit() {
+		return groupLimit;
 	}
-	public void setGroupNumberLimit(Integer groupNumberLimit) {
-		this.groupNumberLimit = groupNumberLimit;
+
+	public void setGroupLimit(Integer groupLimit) {
+		this.groupLimit = groupLimit;
 	}
-	public Integer getGroupStudentLimit() {
-		return groupStudentLimit;
+
+	public Integer getGroupMemberLimit() {
+		return groupMemberLimit;
 	}
-	public void setGroupStudentLimit(Integer groupStudentLimit) {
-		this.groupStudentLimit = groupStudentLimit;
+
+	public void setGroupMemberLimit(Integer groupMemberLimit) {
+		this.groupMemberLimit = groupMemberLimit;
 	}
-	public Seminar getSeminar() {
-		return seminar;
+
+	public Integer getGroupLeft() {
+		return groupLeft;
 	}
-	public void setSeminar(Seminar seminar) {
-		this.seminar = seminar;
+
+	public void setGroupLeft(Integer groupLeft) {
+		this.groupLeft = groupLeft;
 	}
-	
+
 }

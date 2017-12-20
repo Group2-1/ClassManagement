@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.xmu.crms.entity.Group;
 import com.xmu.crms.entity.Topic;
-import com.xmu.crms.view.vo.Response;
+import com.xmu.crms.view.vo.Message;
 /**
  * 
  * @author lingyun
@@ -50,7 +50,7 @@ public class TopicController {
 	}
 
 	@DeleteMapping("/{topicId}")
-	public Response deleteTopic(@PathVariable("topicId") int topicId, HttpServletResponse response) {
+	public Message deleteTopic(@PathVariable("topicId") int topicId, HttpServletResponse response) {
 
 	   response.setStatus(204);
 	   return null;
