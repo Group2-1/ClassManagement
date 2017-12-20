@@ -44,9 +44,9 @@ public class CourseController {
         course1.setNumClass(3);
         course1.setNumStudent(60);
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2017,8,1);
+        calendar.set(2017,8,31,0,0,0);
         course1.setStartTime(calendar.getTime());
-        calendar.set(2018,0,1);
+        calendar.set(2018,0,19,0,0,0);
         course1.setEndTime(calendar.getTime());
         courses.add(course1);
 
@@ -55,12 +55,12 @@ public class CourseController {
         course2.setName("J2EE技术");
         course2.setNumClass(1);
         course2.setNumStudent(60);
-        calendar.set(2017,8,1);
+        calendar.set(2017,8,1,0,0,0);
         course2.setStartTime(calendar.getTime());
-        calendar.set(2018,0,1);
+        calendar.set(2018,1,20,0,0,0);
         course2.setEndTime(calendar.getTime());
         courses.add(course2);
-        response.setStatus(200);
+        //response.setStatus(204);
         return courses;
     }
 

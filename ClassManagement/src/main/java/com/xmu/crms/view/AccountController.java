@@ -4,7 +4,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.xmu.crms.entity.School;
@@ -40,7 +39,7 @@ public class AccountController {
     }
 
     @PutMapping("/me")
-    public Message modifyInfo(@RequestBody User user, HttpServletResponse response) {
+    public Message modifyInfo(HttpServletResponse response) {
         
     	response.setStatus(204);
         return null;

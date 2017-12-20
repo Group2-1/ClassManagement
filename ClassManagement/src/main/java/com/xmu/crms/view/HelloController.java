@@ -22,7 +22,7 @@ public class HelloController {
     @RequestMapping("/teacher/bind")
     public String bind() {
     	
-        return "common/RegisterPage";
+        return "teacher/TeacherBindPage";
     }    
     
     @RequestMapping("/teacher/classInfo")
@@ -33,7 +33,7 @@ public class HelloController {
     
     @RequestMapping("/teacher/courseHome")
     public String frame(Model model) {
-        /*model.addAttribute("data", new String[]{"周三1-2节", "周三000-2节", "周三1-20节"});*/
+     
         return "teacher/TeacherCourseHomePage";
     }
     
@@ -49,6 +49,14 @@ public class HelloController {
         return "teacher/TeacherCourseInformation";
     }
  
+    @RequestMapping("/teacher/createSchool")
+    public String createSchool() {
+    	
+        return "teacher/TeacherCreateSchool";
+    }    
+    
+    
+    
     @RequestMapping("/teacher/createClass")
     public String createClass() {
     	

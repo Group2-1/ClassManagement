@@ -8,7 +8,7 @@
                                      maximum-scale=1.0,
                                      user-scalable=no">
     <title>ClassManage</title>
-<link th:href="@{/css/common/RegisterPage.css}" rel="stylesheet" type="text/css"/>
+<link href="../css/common/RegisterPage.css" rel="stylesheet" type="text/css"/>
 
 </head>
 
@@ -16,16 +16,16 @@
 <div class="titleBackground"></div>
 <div class="title">课程管理系统</div>
 <div class="icon">
-<img th:src="@{/img/home.png}">首页
-<img th:src="@{/img/help.png}">帮助
-<img th:src="@{/img/exit.png}">退出
+<img src="../img/home.png">首页
+<img src="../img/help.png">帮助
+<img src="../img/exit.png">退出
 </div>
 <div class="phoneNum">手机号:<input type="text" name="phoneNum"/></div>
 <div class="password">密码:<input type="text" name="password"/></div>
 <div class="name">姓名:<input type="text" name="name"/></div>
 <div class="province">省:<select class="provinceSelect"></select></div>
 <div class="city">市:<select class="citySelect"></select></div>
-<div class="school">学校:<select class="schoolSelect"></select><a href="../teacher/TeacherCreateSchool.html"><div class="createSchool">创建学校</div></a></div>
+<div class="school">学校:<select class="schoolSelect"></select><a href="/teacher/createSchool"><div class="createSchool">创建学校</div></a></div>
 <div class="gender">性别:</div>
 <div class="male">男<input type="radio" value="男" name="gender" checked="checked"/></div>
 <div class="female">女<input type="radio" value="女" name="gender"/></div>
@@ -35,9 +35,9 @@
 <div class="stuffNum">教工号:<input type="text" name="stuffNum"/></div>
 <div class="eMail">邮箱:<input type="text" name="eMail"/></div>
 <div class="submit" onclick="register()">提交</div>
-<script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
 
-<script type="text/javascript" th:src="@{/js/common/common.js}"></script>
+<script type="text/javascript" src="../js/common/common.js"></script>
 
 </body>
 
