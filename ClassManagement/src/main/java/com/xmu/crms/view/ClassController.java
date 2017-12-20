@@ -19,7 +19,7 @@ import com.xmu.crms.entity.Proportions;
 import com.xmu.crms.entity.User;
 import com.xmu.crms.view.vo.ClassGroupVO;
 import com.xmu.crms.view.vo.CourseClassVO;
-import com.xmu.crms.view.vo.Message;
+import com.xmu.crms.view.vo.Response;
 import com.xmu.crms.view.vo.SelectClassVO;
 /**
  * class controller
@@ -79,14 +79,14 @@ public class ClassController {
     }
     
     @PutMapping("/{classId}")
-    public Message updateClass(@PathVariable("classId") int classId,
+    public Response updateClass(@PathVariable("classId") int classId,
                                 HttpServletResponse response) {
         response.setStatus(204);
         return null;
     }
 
     @DeleteMapping("/{classId}")
-    public Message deleteClass(@PathVariable("classId") int classId,
+    public Response deleteClass(@PathVariable("classId") int classId,
                                 HttpServletResponse response) {
         response.setStatus(204);
         return null;
@@ -117,7 +117,7 @@ public class ClassController {
     }
 
     @DeleteMapping("/{classId}/student/{studentId}")
-    public Message cancelClass(@PathVariable("classId") int classId,
+    public Response cancelClass(@PathVariable("classId") int classId,
                                 @PathVariable("studentId") int studentId,
                                 HttpServletResponse response) {
         response.setStatus(204);
@@ -149,7 +149,7 @@ public class ClassController {
     }
 
     @PutMapping("/{classId}/classgroup/resign")
-    public Message resignLeader(@PathVariable("classId") int classId,
+    public Response resignLeader(@PathVariable("classId") int classId,
                                  @RequestBody User student,
                                  HttpServletResponse response) {
         response.setStatus(204);
@@ -157,7 +157,7 @@ public class ClassController {
     }
 
     @PutMapping("/{classId}/classgroup/assign")
-    public Message assignLeader(@PathVariable("classId") int classId,
+    public Response assignLeader(@PathVariable("classId") int classId,
                                  @RequestBody User student,
                                  HttpServletResponse response) {
         response.setStatus(204);
@@ -165,7 +165,7 @@ public class ClassController {
     }
 
     @PutMapping("/{classId}/classgroup/add")
-    public Message addMember(@PathVariable("classId") int classId,
+    public Response addMember(@PathVariable("classId") int classId,
                               @RequestBody User student,
                               HttpServletResponse response) {
         response.setStatus(204);
@@ -173,7 +173,7 @@ public class ClassController {
     }
 
     @PutMapping("/{classId}/classgroup/remove")
-    public Message removeMember(@PathVariable("classId") int classId,
+    public Response removeMember(@PathVariable("classId") int classId,
                                  @RequestBody User student,
                                  HttpServletResponse response) {
         response.setStatus(204);

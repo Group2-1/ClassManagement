@@ -1,109 +1,50 @@
 package com.xmu.crms.entity;
-/**
- * topic entity
- * @author lingyun
- *
- */
+
+import java.math.BigInteger;
+
 public class Topic {
-	
-	private Integer id;
-	
-	private String serial;
-	
-	private String name;	
-	
+	private BigInteger id;
+	private String name;
 	private String description;
+	private Integer groupNumberLimit;
+	private Integer groupStudentLimit;
+	private Seminar seminar;
 	
-	private Integer groupLimit;	
-	
-	private Integer groupMemberLimit;
-	
-	private Integer groupLeft;
-
-	public Topic(Integer id, String serial, String name, String description, Integer groupLimit, Integer groupMemberLimit, Integer groupLeft) {
-		this.id = id;
-		this.serial = serial;
-		this.name = name;
-		this.description = description;
-		this.groupLimit = groupLimit;
-		this.groupMemberLimit = groupMemberLimit;
-		this.groupLeft = groupLeft;
-		
-	}
-	/*
-	public Topic(Integer id, String name, String description, Integer groupLimit, Integer groupMemberLimit) {
-		this.id = id;
-		this.name = name;
-		this.description = description;
-		this.groupLimit = groupLimit;
-		this.groupMemberLimit = groupMemberLimit;
-		
-	}	
-
-	public Topic(Integer id, String name) {
-		this.id = id;
-		this.name = name;
-		
-	}	*/
-	
-	public Topic() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Integer getId() {
+	public BigInteger getId() {
 		return id;
 	}
-
-	public void setId(Integer id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
-
-	public String getSerial() {
-		return serial;
-	}
-
-	public void setSerial(String serial) {
-		this.serial = serial;
-	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getDescription() {
 		return description;
 	}
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public Integer getGroupLimit() {
-		return groupLimit;
+	public Integer getGroupNumberLimit() {
+		return groupNumberLimit;
 	}
-
-	public void setGroupLimit(Integer groupLimit) {
-		this.groupLimit = groupLimit;
+	public void setGroupNumberLimit(Integer groupNumberLimit) {
+		this.groupNumberLimit = groupNumberLimit;
 	}
-
-	public Integer getGroupMemberLimit() {
-		return groupMemberLimit;
+	public Integer getGroupStudentLimit() {
+		return groupStudentLimit;
 	}
-
-	public void setGroupMemberLimit(Integer groupMemberLimit) {
-		this.groupMemberLimit = groupMemberLimit;
+	public void setGroupStudentLimit(Integer groupStudentLimit) {
+		this.groupStudentLimit = groupStudentLimit;
 	}
-
-	public Integer getGroupLeft() {
-		return groupLeft;
+	public Seminar getSeminar() {
+		return seminar;
 	}
-
-	public void setGroupLeft(Integer groupLeft) {
-		this.groupLeft = groupLeft;
+	public void setSeminar(Seminar seminar) {
+		this.seminar = seminar;
 	}
-
+	
 }

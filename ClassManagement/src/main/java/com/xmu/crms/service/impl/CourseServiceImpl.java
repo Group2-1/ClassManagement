@@ -1,5 +1,142 @@
 package com.xmu.crms.service.impl;
+import java.math.BigInteger;
+import java.util.List;
 
+import com.xmu.crms.entity.ClassInfo;
+import com.xmu.crms.entity.Course;
+import com.xmu.crms.exception.CourseNotFoundException;
+
+
+/**
+ *
+ * @author YeXiaona ZhouZhongjun CaoXingmei
+ * @version 2.00
+ *
+ */
 public class CourseServiceImpl {
+	/**
+	 * 按userId获取与当前用户相关联的课程列表.
+	 * <p>老师与他相关联的课程列表<br> 
+	 * @author ZhouZhongjun
+	 * @param userId 用户Id
+	 * @return null 课程列表
+	 * @exception IllegalArgumentException userId格式错误时抛出
+	 * @exception CourseNotFoundException 未找到课程
+	 */
+	 List<Course> listCourseByUserId(BigInteger userId)throws IllegalArgumentException,CourseNotFoundException {
+		return null;
+	}
 
+
+	/**
+	 * 按userId创建课程.
+	 * <p>按userId创建课程<br>
+	 * @author ZhouZhongjun
+	 * @param userId 用户Id
+	 * @param course 课程信息
+	 * @return courseId 新建课程的id
+	 * @exception IllegalArgumentException userId格式错误时抛出
+	 */
+	  BigInteger insertCourseByUserId(BigInteger userId,Course course)throws IllegalArgumentException {
+		return null;
+	}
+
+
+	/**
+	 * 按courseId获取课程 .
+	 * <p>按courseId获取课程 <br>
+	 * @author ZhouZhongjun
+	 * @param courseId 课程Id
+	 * @return course
+	 * @exception IllegalArgumentException courseId格式错误时抛出
+	 * @exception CourseNotFoundException 未找到课程
+	 */
+	  Course getCourseByCourseId(BigInteger courseId)throws IllegalArgumentException,CourseNotFoundException {
+		return null;
+	}
+
+
+	/**
+	 * 传入courseId和course信息修改course信息.
+	 * <p>传入courseId和course信息修改course信息 <br>
+	 * @author ZhouZhongjun
+	 * @param courseId 课程Id
+	 * @param course 课程信息
+	 */
+	 void updateCourseByCourseId(BigInteger courseId,Course course) {
+	}
+
+
+	/**
+	 * 按courseId删除课程.
+	 * <p>先根据courseID删除Seminar 和 class,然后再将course的信息删除<br>
+	 * @author ZhouZhongjun
+	 * @param courseId 课程Id
+	 * @see SeminarService #deleteSemiarByCourseId(BigInteger courseId)
+	 * @see ClassServiceImpl   #deleteClassByCourseId(BigInteger courseId)
+	 * @exception IllegalArgumentException courseId格式错误时抛出
+	 * @exception CourseNotFoundException 未找到课程
+	 */
+	 void deleteCourseByCourseId(BigInteger courseId)throws IllegalArgumentException,CourseNotFoundException {
+	}
+
+
+
+	/**
+	 * 根据课程名称获取课程列表.
+	 * <p>根据课程名称获取课程列表<br>
+	 * @author YeXiaona
+	 * @param courseName 课程名称
+	 * @return list 课程列表
+	 * @see CourseServiceImpl #getCourseByCourseId(BigInteger courseId)
+	 */
+	 List<Course> listCourseByCourseName(String courseName) {
+		return null;
+	}
+
+
+	/**
+	 * 按课程名称获取班级列表.
+	 * <p>根据课程名获取课程ID，通过课程ID获取班级列表<br>
+	 * @author YeXiaona
+	 * @param courseName 课程名称
+	 * @return list 班级列表
+	 * @see CourseServiceImpl #listCourseByCourseName(String courseName)
+	 * @see ClassServiceImpl #listClassByCourseId(BigInteger courseId)
+	 */
+	 List<ClassInfo> listClassByCourseName(String courseName) {
+		return null;
+	}
+
+
+	/**
+	 * 按教师名称获取班级列表.
+	 * <p>根据教师名称获取课程ID，通过课程ID获取班级列表<br>
+	 * @author YeXiaona
+	 * @param teacherName 教师名称
+	 * @return list 班级列表
+	 * @see UserService #listUserIdByUserName(String userName)
+	 * @see CourseServiceImpl #listClassByUserId(BigInteger userId)
+	 */
+	 List<ClassInfo> listClassByTeacherName(String teacherName) {
+		return null;
+	}
+
+
+	/**
+	 * 根据教师ID获取班级列表.
+	 * <p>根据教师ID获取班级列表<br>
+	 * @author YeXiaona
+	 * @param userId 教师ID
+	 * @return list 班级列表
+	 * @see CourseServiceImpl #listCourseByUserId(BigInteger userId)
+	 * @see ClassServiceImpl #listClassByCourseId(BigInteger courseId)
+	 * @exception IllegalArgumentException userId格式错误时抛出或courseId格式错误时抛出
+	 * @exception CourseNotFoundException 未找到课程
+	 * @exception ClassNotFoundException 未找到班级
+	 */
+	 List<ClassInfo> listClassByUserId(BigInteger userId)throws IllegalArgumentException,CourseNotFoundException,ClassNotFoundException {
+		return null;
+	}
 }
+

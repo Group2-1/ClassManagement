@@ -19,8 +19,8 @@ import com.xmu.crms.entity.Group;
 import com.xmu.crms.entity.Seminar;
 import com.xmu.crms.entity.Topic;
 import com.xmu.crms.entity.User;
-import com.xmu.crms.view.vo.Attendance;
-import com.xmu.crms.view.vo.Message;
+import com.xmu.crms.view.vo.AttendanceVO;
+import com.xmu.crms.view.vo.Response;
 import com.xmu.crms.view.vo.SeminarDetail;
 import com.xmu.crms.view.vo.SiteVO;
 import com.xmu.crms.view.vo.Status;
@@ -43,7 +43,7 @@ public class SeminarController {
     }
 
     @PutMapping("/{seminarId}")
-    public Message updateSeminar(@PathVariable("seminarId") int seminarId, @RequestBody Seminar seminar, HttpServletResponse response) {
+    public Response updateSeminar(@PathVariable("seminarId") int seminarId, @RequestBody Seminar seminar, HttpServletResponse response) {
 
     	response.setStatus(200);
         return null;
@@ -51,7 +51,7 @@ public class SeminarController {
     }
 
     @DeleteMapping("/{seminarId}")
-    public Message deleteSeminar(@PathVariable("seminarId") int seminarId, HttpServletResponse response) {
+    public Response deleteSeminar(@PathVariable("seminarId") int seminarId, HttpServletResponse response) {
     	
     	response.setStatus(204);
         return null;
@@ -217,9 +217,9 @@ public class SeminarController {
 
     
     @GetMapping("/{seminarId}/class/{classId}/attendance")
-    public Attendance selectGroupLate(@PathVariable("seminarId") int seminarId, @PathVariable("classId") int classId) {
+    public AttendanceVO selectGroupLate(@PathVariable("seminarId") int seminarId, @PathVariable("classId") int classId) {
         
-    	Attendance attendance = new Attendance();	
+    	AttendanceVO attendance = new AttendanceVO();	
         attendance.setNumPresent(40);
         attendance.setNumStudent(60);
         attendance.setGroup("grouping");

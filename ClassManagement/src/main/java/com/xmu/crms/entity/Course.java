@@ -1,109 +1,86 @@
 package com.xmu.crms.entity;
 
+import java.math.BigInteger;
 import java.util.Date;
 
-/**
- * course entity
- * @author lingyun
- *
- */
 public class Course {
-	
-	private Integer id;
-	
+	private BigInteger id;
 	private String name;
-	
-	private Integer numClass;
-	
-	private Integer numStudent;
-	
-	private Date startTime;
-	
-	private Date endTime;
-	
+	private Date startDate;
+	private Date endDate;
+	private User teacher;
 	private String description;
+	private Integer reportPercentage;
+	private Integer presentationPercentage;
+	private Integer fivePointPercentage;
+	private Integer fourPointPercentage;
+	private Integer threePointPercentage;
 	
-	private Proportions proportions;
-
-	public Course(Integer id, String name, Integer numClass, Integer numStudent, Date startTime, Date endTime,
-			String description, Proportions proportions) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.numClass = numClass;
-		this.numStudent = numStudent;
-		this.startTime = startTime;
-		this.endTime = endTime;
-		this.description = description;
-		this.proportions = proportions;
-	}
-
-	public Course() {
-		// TODO Auto-generated constructor stub
-	}
-
-	public Integer getId() {
+	public BigInteger getId() {
 		return id;
 	}
-
-	public void setId(Integer id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
-
 	public String getName() {
 		return name;
 	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	public Integer getNumClass() {
-		return numClass;
+	public Date getStartDate() {
+		return startDate;
 	}
-
-	public void setNumClass(Integer numClass) {
-		this.numClass = numClass;
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
-
-	public Integer getNumStudent() {
-		return numStudent;
+	public Date getEndDate() {
+		return endDate;
 	}
-
-	public void setNumStudent(Integer numStudent) {
-		this.numStudent = numStudent;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
-
-	public Date getStartTime() {
-		return startTime;
+	public User getTeacher() {
+		return teacher;
 	}
-
-	public void setStartTime(Date startTime) {
-		this.startTime = startTime;
+	public void setTeacher(User teacher) {
+		this.teacher = teacher;
 	}
-
-	public Date getEndTime() {
-		return endTime;
-	}
-
-	public void setEndTime(Date endTime) {
-		this.endTime = endTime;
-	}
-
 	public String getDescription() {
 		return description;
 	}
-
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	public Proportions getProportions() {
-		return proportions;
+	public Integer getReportPercentage() {
+		return reportPercentage;
 	}
-
-	public void setProportions(Proportions proportions) {
-		this.proportions = proportions;
+	public void setReportPercentage(Integer reportPercentage) {
+		this.reportPercentage = reportPercentage;
 	}
-
+	public Integer getPresentationPercentage() {
+		return presentationPercentage;
+	}
+	public void setPresentationPercentage(Integer presentationPercentage) {
+		this.presentationPercentage = presentationPercentage;
+	}
+	public Integer getFivePointPercentage() {
+		return fivePointPercentage;
+	}
+	public void setFivePointPercentage(Integer fivePointPercentage) {
+		this.fivePointPercentage = fivePointPercentage;
+	}
+	public Integer getFourPointPercentage() {
+		return fourPointPercentage;
+	}
+	public void setFourPointPercentage(Integer fourPointPercentage) {
+		this.fourPointPercentage = fourPointPercentage;
+	}
+	public Integer getThreePointPercentage() {
+		return threePointPercentage;
+	}
+	public void setThreePointPercentage(Integer threePointPercentage) {
+		this.threePointPercentage = threePointPercentage;
+	}
+	
 }

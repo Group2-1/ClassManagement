@@ -8,9 +8,9 @@ public class SeminarGrade {
 	
 	private Integer grade;
 
-	private List<PresentationGrade> presentationGrade;
+	private List<PresentationGradeVO> presentationGrade;
 	
-	public SeminarGrade(Integer reportGrade, Integer grade, List<PresentationGrade> presentationGrade) {
+	public SeminarGrade(Integer reportGrade, Integer grade, List<PresentationGradeVO> presentationGrade) {
 		this.reportGrade = reportGrade;
 		this.grade = grade;
 		this.presentationGrade = presentationGrade;
@@ -36,11 +36,11 @@ public class SeminarGrade {
 		this.grade = grade;
 	}
 
-	public List<PresentationGrade> getPresentationGrade() {
+	public List<PresentationGradeVO> getPresentationGrade() {
 		return presentationGrade;
 	}
 
-	public void setPresentationGrade(List<PresentationGrade> presentationGrade) {
+	public void setPresentationGrade(List<PresentationGradeVO> presentationGrade) {
 		this.presentationGrade = presentationGrade;
 	}	
 	

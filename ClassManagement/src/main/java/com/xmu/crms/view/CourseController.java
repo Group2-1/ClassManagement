@@ -19,8 +19,8 @@ import com.xmu.crms.entity.Class;
 import com.xmu.crms.entity.Course;
 import com.xmu.crms.entity.Proportions;
 import com.xmu.crms.entity.Seminar;
-import com.xmu.crms.view.vo.CourseDetail;
-import com.xmu.crms.view.vo.Message;
+import com.xmu.crms.view.vo.CourseDetailVO;
+import com.xmu.crms.view.vo.Response;
 import com.xmu.crms.view.vo.SeminarClasses;
 import com.xmu.crms.view.vo.SeminarGradeDetail;
 
@@ -76,9 +76,9 @@ public class CourseController {
 
 
     @GetMapping("/{courseId}")
-    public CourseDetail selectCourse(@PathVariable("courseId") int courseId, @RequestBody Course course, HttpServletResponse response) {
+    public CourseDetailVO selectCourse(@PathVariable("courseId") int courseId, @RequestBody Course course, HttpServletResponse response) {
         
-    	CourseDetail courseDetail = new CourseDetail();
+    	CourseDetailVO courseDetail = new CourseDetailVO();
         courseDetail.setId(11);
         courseDetail.setName("OOAD");
         courseDetail.setDescription("面向对象分析与设计");
@@ -90,14 +90,14 @@ public class CourseController {
     }
 
     @PutMapping("/{courseId}")
-    public Message updateCourse(@PathVariable("courseId") int courseId, @RequestBody Course course, HttpServletResponse response) {
+    public Response updateCourse(@PathVariable("courseId") int courseId, @RequestBody Course course, HttpServletResponse response) {
 
         response.setStatus(204);
         return null;
     }
 
     @DeleteMapping("/{courseId}")
-    public Message deleteCourse(@PathVariable("courseId") int courseId, HttpServletResponse response) {
+    public Response deleteCourse(@PathVariable("courseId") int courseId, HttpServletResponse response) {
         
     	response.setStatus(204);
         return null;

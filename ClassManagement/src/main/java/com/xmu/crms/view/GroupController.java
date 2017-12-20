@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.xmu.crms.entity.Group;
 import com.xmu.crms.entity.Topic;
 import com.xmu.crms.entity.User;
-import com.xmu.crms.view.vo.Message;
-import com.xmu.crms.view.vo.PresentationGrade;
+import com.xmu.crms.view.vo.Response;
+import com.xmu.crms.view.vo.PresentationGradeVO;
 import com.xmu.crms.view.vo.SelectTopicVO;
 import com.xmu.crms.view.vo.SeminarGrade;
 
@@ -65,7 +65,7 @@ public class GroupController {
 
     
     @PutMapping("/{groupId}/resign")
-    public Message leaderResign(@PathVariable("groupId") int groupId, @RequestBody User leader, HttpServletResponse response) {
+    public Response leaderResign(@PathVariable("groupId") int groupId, @RequestBody User leader, HttpServletResponse response) {
 
     	response.setStatus(204);
         return null;
@@ -74,7 +74,7 @@ public class GroupController {
     
     
     @PutMapping("/{groupId}/assign")
-    public Message memberAssign(@PathVariable("groupId") int groupId, @RequestBody User user, HttpServletResponse response) {
+    public Response memberAssign(@PathVariable("groupId") int groupId, @RequestBody User user, HttpServletResponse response) {
 
     	response.setStatus(204);
     	return null;
@@ -83,7 +83,7 @@ public class GroupController {
 
 
     @PutMapping("/{groupId}/add")
-    public Message addMember(@PathVariable("groupId") int groupId, @RequestBody User user, HttpServletResponse response) {
+    public Response addMember(@PathVariable("groupId") int groupId, @RequestBody User user, HttpServletResponse response) {
 
     	response.setStatus(204);
     	return null;
@@ -114,7 +114,7 @@ public class GroupController {
 
 
     @DeleteMapping("/{groupId}/topic/{topicId}")
-    public Message cancelTopicSelection(@PathVariable("groupId") int groupId, @PathVariable("topicId") int topicId,  HttpServletResponse response) {
+    public Response cancelTopicSelection(@PathVariable("groupId") int groupId, @PathVariable("topicId") int topicId,  HttpServletResponse response) {
 
         response.setStatus(204);
         return null;
@@ -129,13 +129,13 @@ public class GroupController {
         grade.setReportGrade(3);
         grade.setGrade(4);
         
-        List<PresentationGrade> presentationGrade = new ArrayList<>();
-        PresentationGrade presentationGrade1 = new PresentationGrade();
+        List<PresentationGradeVO> presentationGrade = new ArrayList<>();
+        PresentationGradeVO presentationGrade1 = new PresentationGradeVO();
         presentationGrade1.setTopicId(257);
         presentationGrade1.setGrade(4);
         presentationGrade.add(presentationGrade1);
         
-        PresentationGrade presentationGrade2 = new PresentationGrade();
+        PresentationGradeVO presentationGrade2 = new PresentationGradeVO();
         presentationGrade2.setTopicId(285);
         presentationGrade2.setGrade(5);
         presentationGrade.add(presentationGrade2);
