@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>教师基本信息改</title>
+   <link th:href="@{/css/common/InfoModifyPage.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/student/content.css}" />
+</head>
+<body>
+    	<div class="top">
+        	<div class="font">
+        		课堂管理系统
+        	</div>
+            <div class="icon">
+                <img th:src="@{/img/home.png}" />首页
+                <img th:src="@{/img/help.png}" />帮助
+                <img th:src="@{/img/exit.png}" />退出
+            </div>
+        	<div class="clear"></div>
+    	</div>
+        <div class="body">
+           <div class="navigation">
+                <div class="title">导航</div>
+                <div class="line"></div>
+                 <div class="courseIntroduction"><a class="guidefont" href="StudentHomePage.html">基本信息</a>
+                  <a class="guidefont" href="StudentCourseHome.html">课程信息</a>
+                  <a class="guidefont" href="StudentChooseCoursePage.html">选择课程</a>
+                </div>
+            </div>
+            <div class="content">
+              <div class="title">基本信息</div>
+              <hr class="line"/>
+                <div class="imgarea"><img class="img" th:src="@{/img/link.jpg}"/></div>
+                
+                 <div class="info">
+                
+        <form>
+        <table class="table">
+        <tr class="itemName">
+        <td>用户名：<span id="username"></span></td>
+        <td>学号：<input type="text" id="number" name="idnum"/></td>
+        </tr>
+        <tr class="itemName">
+        <td>姓名：<input type="text" id="name" name="name"/></td>
+        <td>性别：<input type="text" id="gender" name="sex"/></td>
+        </tr>
+        <tr class="itemName">
+        <td>学校：<input type="text" id="school" name="school"/></td>
+        <td>学历：<input type="text" id="title" name="title"/></td>
+        </tr>
+        <tr class="itemName">
+        <td>E-mail：<input type="text" id="email" name="e-mail"/></td>
+        <td>联系方式：<input type="text" id="phone" name="phone"/></td>
+        </tr>
+         </table>
+         <br/>
+        <br/>
+        <br/>
+        <br/>
+       <div >
+        <input class="button" type="button" onclick="submitInfo()" name="submit" value="保存" />
+        </div>
+        </form>
+       
+        
+        </div>
+            </div>
+            
+           
+            <div class="clear"></div>
+        </div>
+        <script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+        <script type="text/javascript" th:src="@{/js/student/studentInfoModify.js}"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" />
+    <title>学生主页</title>
+     <link th:href="@{/css/student/StudentChooseCoursePage.css}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/css/student/content.css}" />
+</head>
+<body>
+    	<div class="top">
+        	<div class="font">
+        		课堂管理系统
+        	</div>
+        	<div class="icon">
+                <img th:src="@{/img/home.png}" />首页
+                <img th:src="@{/img/help.png}" />帮助
+                <img th:src="@{/img/exit.png}" />退出
+            </div>
+        	<div class="clear"></div>
+    	</div>
+        <div class="body">
+            <div class="navigation">
+                <div class="title">导航</div>
+                <div class="line"></div>
+                <div class="courseIntroduction">
+                    <a class="guidefont" href="/student/home">基本信息</a>
+                    <a class="guidefont" href="#">课程信息</a>
+                    <a class="guidefont" href="/student/chooseCourse">选择课程</a>
+                </div>
+            </div>
+        <div class="content">
+            <div class="title">课程信息</div>
+            <hr class="line"/>
+            <div id="courseList">
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        </div>
+<script type="text/javascript" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/student/studentCourseList.js}"></script>
+</body>
+</html>

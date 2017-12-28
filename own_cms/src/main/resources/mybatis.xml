@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--<properties resource="application.properties"/>-->
+
+    <typeAliases>
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://120.77.173.98/xmu8201?charset=utf8" />
+                <property name="username" value="xmu8201"/>
+                <property name="password" value="f6812368"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mapper/CourseMapper.xml"/>
+        <!--<mapper resource="xmu.crms.demo.mapper.CourseMapper"/>-->
+    </mappers>
+</configuration>
